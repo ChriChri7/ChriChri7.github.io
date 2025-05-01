@@ -1,15 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Galleria Immagini - Milano</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding-top: 50px;
+    }
+    .figure-caption-output {
+      font-style: italic;
+      color: #6c757d;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <figure class="figure">
-    <img src="./img/Milan.jpg" class="figure-img img-fluid rounded" alt="Milan">
-    <figcaption class="figure-caption">Inserisci didascalia dell'immagine: </figcaption>
-  </figure>
+
+<div class="container text-center">
+  <h1 class="mb-4">Galleria di Milano</h1>
+
+  <!-- Card con immagine -->
+  <div class="card mb-4">
+    <img src="./img/Milan.jpg" class="card-img-top" alt="Milano">
+    <div class="card-body">
+      <h5 class="card-title">Immagine di Milano</h5>
+      <p class="card-text">Inserisci una didascalia per questa immagine:</p>
+      <input type="text" id="captionInput" class="form-control" placeholder="Scrivi qui...">
+      <p id="captionOutput" class="figure-caption-output"></p>
+    </div>
+  </div>
+
+  <!-- Alert di esempio -->
+  <div class="alert alert-info mt-4" role="alert">
+    Questo è un esempio di alert informativo.
+  </div>
+
+  <!-- Badge di esempio -->
+  <span class="badge bg-primary">Nuovo</span>
+</div>
+
+<script>
+  const input = document.getElementById('captionInput');
+  const output = document.getElementById('captionOutput');
+
+  input.addEventListener('input', () => {
+    output.textContent = input.value;
+  });
+</script>
+
 </body>
 </html>
