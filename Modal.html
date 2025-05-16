@@ -3,66 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Esempio Modal con Bootstrap</title>
-  
-  <!-- ✅ Collegamento al CSS di Bootstrap 5 -->
+  <title>Modal Personalizzato</title>
+
+  <!-- ✅ Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- ✅ Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ✅ Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* 🌟 Stile generale */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #1d2b64, #f8cdda);
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-custom {
+      background-color: #ff4b5c;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #ff1e33;
+      transform: scale(1.05);
+    }
+
+    .modal-content {
+      background-color: #2e2e2e;
+      color: #fff;
+      border-radius: 15px;
+    }
+
+    .modal-header {
+      border-bottom: none;
+    }
+
+    .modal-footer {
+      border-top: none;
+    }
+
+    .modal-body {
+      font-size: 1rem;
+    }
+
+    .form-control {
+      background-color: #444;
+      border: none;
+      color: white;
+    }
+
+    .form-control:focus {
+      background-color: #555;
+      box-shadow: none;
+      border-color: #ff4b5c;
+    }
+
+    .btn-close {
+      filter: invert(1);
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ✅ Contenitore principale -->
-  <div class="container mt-5 text-center">
-    <h1>Benvenuto!</h1>
-    <p>Clicca il pulsante qui sotto per aprire il modal:</p>
+  <!-- 🌟 Bottone centrale per aprire il modal -->
+  <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modalMagico">
+    <i class="bi bi-stars me-2"></i> Apri Modal Magico
+  </button>
 
-    <!-- ✅ Pulsante che apre il modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mioModal">
-      Apri Modale
-    </button>
-  </div>
-
-  <!-- ✅ Struttura del Modal -->
-  <div class="modal fade" id="mioModal" tabindex="-1" aria-labelledby="titoloModal" aria-hidden="true">
-    <div class="modal-dialog">
+  <!-- 🌙 Modal personalizzato -->
+  <div class="modal fade" id="modalMagico" tabindex="-1" aria-labelledby="titoloMagico" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
 
-        <!-- Intestazione del modal -->
+        <!-- Intestazione -->
         <div class="modal-header">
-          <h5 class="modal-title" id="titoloModal">Titolo del Modale</h5>
-          <!-- Pulsante per chiudere il modal -->
+          <h5 class="modal-title" id="titoloMagico"><i class="bi bi-magic"></i> Benvenuto nel Modale!</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
         </div>
 
+        <!-- Corpo -->
         <div class="modal-body">
-          <p>Questo è il contenuto del modale. Puoi aggiungere testo, immagini, form o qualsiasi altro contenuto HTML.</p>
-          <p><strong>Esempio:</strong> Inserisci i tuoi dati qui sotto.</p>
-
-         
+          <p>Hai appena aperto un modale con stile! Inserisci i tuoi dati per ricevere la nostra newsletter stellare.</p>
+          
           <form>
-            <div class="mb-3 text-start">
-              <label for="email" class="form-label">Indirizzo Email</label>
-              <input type="email" class="form-control" id="email" placeholder="nome@esempio.com">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" placeholder="Il tuo nome">
             </div>
-            <div class="mb-3 text-start">
-              <label for="messaggio" class="form-label">Messaggio</label>
-              <textarea class="form-control" id="messaggio" rows="3"></textarea>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="tuo@email.com">
             </div>
           </form>
         </div>
 
-       
+        <!-- Footer -->
         <div class="modal-footer">
-        
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          
-          <button type="button" class="btn btn-primary">Invia</button>
+          <button type="button" class="btn btn-custom">Iscriviti</button>
         </div>
 
       </div>
     </div>
   </div>
 
-
+  <!-- ✅ Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
