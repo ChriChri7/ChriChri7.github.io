@@ -79,6 +79,22 @@
       <a href="#">Link 3</a>
     </div>
   </nav>
+  <script>
+    const button = document.querySelector("button");
+    const dropdown = document.querySelector("div");
+    let isVisible = false;
+    button.addEventListener("click", () => {
+      dropdown.style.display = isVisible ? "none" : "block";
+      isVisible = !isVisible;
+    });
+
+document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target) && !e.target.matches("button")) {
+        dropdown.style.display = "none";
+        isVisible = false;
+      }
+    });
+  </script>
 
   
 </body>
