@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dropdown semplice</title>
+  <title>Dropdown elegante</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
+      background: #f0f2f5;
     }
 
     nav {
@@ -15,44 +16,57 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: rgb(102, 0, 255);
-      padding: 12px;
-      box-sizing: border-box;
+      background-color: #4b3ca7;
+      padding: 14px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 1000;
     }
 
     button {
-      background-color: white;
+      background: linear-gradient(135deg, #6e58ff, #836fff);
       border: none;
-      padding: 10px 16px;
-      border-radius: 8px;
-      cursor: pointer;
+      padding: 12px 22px;
+      border-radius: 30px;
+      color: white;
       font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(131,111,255,0.6);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
     }
 
     button:hover {
-      background-color: #e0e0e0;
+      background: linear-gradient(135deg, #8e7fff, #a095ff);
+      box-shadow: 0 6px 14px rgba(160,150,255,0.8);
     }
 
     #dropdown {
-      display: none;
       position: absolute;
-      background-color: rgb(102, 0, 255);
-      margin-top: 8px;
-      padding: 10px;
-      border-radius: 0 0 8px 8px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-      min-width: 120px;
+      top: 56px; /* altezza nav + margine */
+      left: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      padding: 12px 0;
+      min-width: 160px;
+      display: none;
+      font-size: 15px;
+      user-select: none;
     }
 
     #dropdown a {
       display: block;
-      color: white;
+      padding: 10px 20px;
+      color: #4b3ca7;
       text-decoration: none;
-      padding: 6px 0;
+      transition: background 0.2s ease;
     }
 
     #dropdown a:hover {
-      text-decoration: underline;
+      background-color: #f0e9ff;
     }
   </style>
 </head>
@@ -60,9 +74,9 @@
   <nav>
     <button id="toggleBtn">Menu</button>
     <div id="dropdown">
-      <a href="#">link 1</a>
-      <a href="#">link 2</a>
-      <a href="#">link 3</a>
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
     </div>
   </nav>
 
@@ -71,15 +85,11 @@
     const dropdown = document.getElementById('dropdown');
 
     btn.addEventListener('click', () => {
-      if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-      } else {
-        dropdown.style.display = 'block';
-      }
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
     });
 
-    document.addEventListener('click', (event) => {
-      if (!btn.contains(event.target) && !dropdown.contains(event.target)) {
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
         dropdown.style.display = 'none';
       }
     });
