@@ -2,149 +2,148 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tabelle</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tabelle</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    .top-right-link {
-      text-align: right;
-      padding: 10px 20px;
-    }
+        .top-left-link {
+            padding: 10px 20px;
+            text-align: left;
+        }
 
-    .top-right-link a {
-      text-decoration: none;
-      color: #007BFF;
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
+        .top-left-link a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
 
-    table {
-      margin: 30px auto 0 auto; /* Spostata verso il basso */
-      border: 4px solid black;
-      border-collapse: collapse;
-    }
+        table {
+            margin: 40px auto 0 auto; /* sposta la tabella più giù */
+            border-collapse: collapse;
+            border: 4px solid black;
+        }
 
-    th, td {
-      border: 2px solid black;
-      padding: 8px;
-      text-align: center;
-    }
+        th, td {
+            border: 2px solid black;
+            padding: 8px;
+            text-align: center;
+        }
 
-    caption {
-      font-size: 1.5rem;
-      font-weight: bold;
-      padding: 10px;
-    }
-  </style>
+        caption {
+            font-weight: bold;
+            font-size: 1.5rem;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Link in alto a destra -->
-  <div class="top-right-link">
-    <a href="index.html">← Torna alla Home</a>
-  </div>
+    <!-- Link in alto a sinistra -->
+    <div class="top-left-link">
+        <a href="index.html">← Torna alla Home</a>
+    </div>
 
-  <!-- Tabella -->
-  <table>
-    <caption>3Cinf</caption>
-    <tr>
-      <th bgcolor="blue"></th>
-      <th>ITA</th>
-      <th>Inglese</th>
-      <th>Storia</th>
-      <th>INF</th>
-      <th>TPS</th>
-      <th>Mate</th>
-      <th>Sistemi</th>
-      <th>TLC</th>
-      <th>Ed. fisica</th>
-      <th>Ed. civica</th>
-    </tr>
-    <tr>
-      <td>Isidoro Matteo</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="red">5</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="red">4</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="green">6</td>
-    </tr>
-    <tr>
-      <td>Rosa Christian</td>
-      <td bgcolor="red">5</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="green">6</td>
-      <td bgcolor="green">6</td>
-      <td bgcolor="red">5</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="green">10</td>
-      <td bgcolor="green">6.5</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="green">7</td>
-    </tr>
-    <tr>
-      <td>Pacchioni Matteo</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="green">7.5</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="red">4</td>
-      <td bgcolor="red">4</td>
-      <td bgcolor="green">6</td>
-      <td bgcolor="red">3</td>
-      <td bgcolor="green">7</td>
-    </tr>
-    <tr>
-      <td>Chiappa Matteo</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="green">9</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="green">6</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="green">9</td>
-      <td bgcolor="green">7</td>
-    </tr>
-    <tr>
-      <td>Zaffaroni Edoardo</td>
-      <td bgcolor="green">7.5</td>
-      <td bgcolor="green">6.5</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="green">10</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="red">4.9</td>
-      <td bgcolor="green">9</td>
-      <td bgcolor="green">7.5</td>
-      <td bgcolor="green">9</td>
-      <td bgcolor="green">7</td>
-    </tr>
-    <tr>
-      <td>Ulano Matias</td>
-      <td bgcolor="red">5</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="red">4</td>
-      <td bgcolor="green">6</td>
-      <td bgcolor="red">5</td>
-      <td bgcolor="green">6</td>
-      <td bgcolor="green">7</td>
-      <td bgcolor="red">5</td>
-      <td bgcolor="green">8</td>
-      <td bgcolor="green">7</td>
-    </tr>
-  </table>
+    <table border="4">
+        <caption>3Cinf</caption>
+        <tr>
+            <th bgcolor="blue"></th>
+            <th>ITA</th>
+            <th>Inglese</th>
+            <th>Storia</th>
+            <th>INF</th>
+            <th>TPS</th>
+            <th>Mate</th>
+            <th>Sistemi</th>
+            <th>TLC</th>
+            <th>Ed. fisica</th>
+            <th>Ed. civica</th>
+        </tr>
+        <tr>
+            <td>Isidoro Matteo</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="red">5</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="red">4</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="green">6</td>
+        </tr>
+        <tr>
+            <td>Rosa Christian</td>
+            <td bgcolor="red">5</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="green">6</td>
+            <td bgcolor="green">6</td>
+            <td bgcolor="red">5</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="green">10</td>
+            <td bgcolor="green">6.5</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="green">7</td>
+        </tr>
+        <tr>
+            <td>Pacchioni Matteo</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="green">7.5</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="red">4</td>
+            <td bgcolor="red">4</td>
+            <td bgcolor="green">6</td>
+            <td bgcolor="red">3</td>
+            <td bgcolor="green">7</td>
+        </tr>
+        <tr>
+            <td>Chiappa Matteo</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="green">9</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="green">6</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="green">9</td>
+            <td bgcolor="green">7</td>
+        </tr>
+        <tr>
+            <td>Zaffaroni Edoardo</td>
+            <td bgcolor="green">7.5</td>
+            <td bgcolor="green">6.5</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="green">10</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="red">4.9</td>
+            <td bgcolor="green">9</td>
+            <td bgcolor="green">7.5</td>
+            <td bgcolor="green">9</td>
+            <td bgcolor="green">7</td>
+        </tr>
+        <tr>
+            <td>Ulano Matias</td>
+            <td bgcolor="red">5</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="red">4</td>
+            <td bgcolor="green">6</td>
+            <td bgcolor="red">5</td>
+            <td bgcolor="green">6</td>
+            <td bgcolor="green">7</td>
+            <td bgcolor="red">5</td>
+            <td bgcolor="green">8</td>
+            <td bgcolor="green">7</td>
+        </tr>
+    </table>
 
 </body>
 
