@@ -1,59 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./img/favicon.jpg" />
-    <title>Document</title>
-    <style>
-      body {
-        text-align: center;
-        background-color: #ddedaa;
-      }
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./img/favicon.jpg" />
+  <title>Sito di Christian Rosa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f4e3;
+      color: #333;
+      text-align: center;
+    }
 
-      h1 {
-        margin-top: 100px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-      }
+    h1 {
+      margin-top: 80px;
+      font-size: 3rem;
+      color: #4b6043;
+    }
 
-      h2 {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Sito di Christian Rosa</h1>
-    <h2>Sito ad uso didattico</h2>
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: #6b7c59;
+    }
 
-    <div id="esercizi">
-      <span>
-        <a href="./intestazioni.html">Intestazioni</a>
-      </span>
-      <br />
-      <a href="./paragrafi.html">Paragrafi</a>
-      <br />
-      <a href="./formattazione.html">Formattazione</a>
-      <br />
-      <a href="./liste.html">Liste</a>
-      <br />
-      <a href="./immagini.html">Immagini</a>
-      <br />
-      <a href="./tabelle">Tabelle</a>
-      <br />
-      <a href="./form">Form</a>
-      <br />
-      <a href="./ricettapasta">Ricetta pasta alla crema di peperoni</a>
-      <br />
-      <a href="./tabellaColorata.html">Tabella colorata</a>
-      <br />
-      <a href="./portale.html">Portale</a>
-      <br />
-      <a href="./dropdown.html">Dropdown</a>
-      <br />
-      <a href="./Bootstrap.html">Bootstrap</a>
-      <br />
-      <a href="./Modal.html">Modal</a>
-      <br />
-    </div>
-  </body>
+    #esercizi {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 60px;
+    }
+
+    .link-card {
+      background-color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s, background-color 0.2s;
+      width: 260px;
+      text-align: center;
+    }
+
+    .link-card a {
+      text-decoration: none;
+      color: #4b6043;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: block;
+    }
+
+    .link-card:hover {
+      transform: scale(1.03);
+      background-color: #e6efd2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sito di Christian Rosa</h1>
+  <h2>Sito ad uso didattico</h2>
+
+  <div id="esercizi">
+    <div class="link-card"><a href="./intestazioni.html">Intestazioni</a></div>
+    <div class="link-card"><a href="./paragrafi.html">Paragrafi</a></div>
+    <div class="link-card"><a href="./formattazione.html">Formattazione</a></div>
+    <div class="link-card"><a href="./liste.html">Liste</a></div>
+    <div class="link-card"><a href="./immagini.html">Immagini</a></div>
+    <div class="link-card"><a href="./tabelle.html">Tabelle</a></div>
+    <div class="link-card"><a href="./form.html">Form</a></div>
+    <div class="link-card"><a href="./ricettapasta.html">Ricetta pasta alla crema di peperoni</a></div>
+    <div class="link-card"><a href="./tabellaColorata.html">Tabella colorata</a></div>
+    <div class="link-card"><a href="./portale.html">Portale</a></div>
+    <div class="link-card"><a href="./dropdown.html">Dropdown</a></div>
+    <div class="link-card"><a href="./Bootstrap.html">Bootstrap</a></div>
+    <div class="link-card"><a href="./Modal.html">Modal</a></div>
+  </div>
+</body>
 </html>
