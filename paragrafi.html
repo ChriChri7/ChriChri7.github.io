@@ -1,36 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Paragrafi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
+  <title>Paragrafi sul Calcio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      padding: 50px 20px;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f8;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+    }
+
+    h1 {
       font-family: 'Merriweather', serif;
-      background-color: #f9f9f9;
-      color: #444444;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.75;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #1a1a1a;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
     }
 
     p {
-      font-size: 1.15rem;
-      margin-bottom: 1.8em;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.8em;
+      font-size: 1.1rem;
+      margin-bottom: 1.6em;
+      border-left: 4px solid #007acc;
+      padding-left: 15px;
+      background-color: #f0f8ff;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <p>stasera tra Milan e Napoli vince il Milan</p>
-  <p>Milan secondo al mondo con 7 champions</p>
-  <p>marotta league</p>
-  <p>Inter con due stelle ma una di cartone</p>
-  <p></p>
+  <div class="container">
+    <h1>Commenti Calcistici</h1>
+    <p>Stasera tra Milan e Napoli vince il Milan.</p>
+    <p>Il Milan è secondo al mondo con 7 Champions League.</p>
+    <p>Marotta League: quando il mercato è più importante del campo.</p>
+    <p>L'Inter ha due stelle, ma una sembra di cartone.</p>
+  </div>
 </body>
 </html>
