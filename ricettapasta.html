@@ -1,89 +1,165 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ricetta</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ricetta Pasta con crema di peperoni</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #b53939;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    table, th, td {
+      border: 4px solid #b53939;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 25px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 25px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 6px;
+      font-weight: 600;
+      color: #444;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    input[type="checkbox"] {
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .radio-group {
+      margin: 15px 0 25px;
+    }
+    .radio-group label {
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      color: #555;
+    }
+    input[type="radio"] {
+      margin-right: 6px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    input[type="submit"] {
+      background-color: #b53939;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #8a2b2b;
+    }
+  </style>
 </head>
 <body>
-    <h1>Pasta con crema di peperoni</h1>
-    <img src="./img/Pasta-con-crema-di-peperoni-3.webp" alt="pasta-con-crema-di-peperoni" width="700" height="500">
-    <table border="4">
-        <br>
-        </br>
-        <tr>
-            <th>Preparazione</th>
-            <th>Difficoltà</th>
-            <th>Prezzo</th>
-        </tr>
-        <tr>
-            <td>20 min</td>
-            <td>Facile</td>
-            <td>Basso</td>
-        </tr>
-    </table>
-    <hr>
-    <h2>Ingredienti</h2>
-    <ul>
-        <li>Fusilli</li>
-        <li>peperoni</li>
-        <li>2 spicchi di aglio</li>
-        <li>pomodori ramati</li>
-        <li>olio extra vergine di oliva</li>
-        <li>pepe nero</li>
-        <li>basilico</li>
-        <li>sale fino</li>
-    </ul>
-    <hr>
-    <h2>Preparazione</h2>
-    <p>
-       Per preparare la pasta con crema di peperoni, mettete a bollire l'acqua della pasta e salatela. Nel frattempo lavate i peperoni, rimuovete la calotta , tagliateli per il senso della lunghezza ed eliminate i semini interni , quindi riduceteli a cubetti. Tagliate grossolanamente il pomodoro ramato. Versate un filo d’olio in una casseruola e fate soffriggere gli spicchi di aglio. Aggiungete i cubetti di peperone. Unite anche il pomodoro, salate e poi aromatizzate con il pepe e le foglie di basilico. Cuocete a fuoco medio-alto per circa 15 minuti mescolando di tanto in tanto. Quando i peperoni saranno cotti, versate la pasta nell'acqua che intanto sarà arrivata a bollore e cuocetela al dente. Intanto versate i peperoni cotti col pomodoro in un contenitore alto, eliminando l'aglio, e frullate tutto con il mixer a immersione. Trasferite la crema ottenuta nella padella in cui avete cotto i peperoni, accendete il fuoco basso, unite un mestolo di acqua di cottura della pasta e poi, una volta cotta al dente, scolate la pasta direttamente nella crema di peperoni. Mantecate il tempo di amalgamare bene la pasta, poi trasferite nei piatti da portata e aromatizzate con ancora qualche fogliolina di basilico fresca. La vostra pasta con crema di peperoni è pronta per essere servita.  
-    </p>
-    <br>
-    <br>
+  <h1>Pasta con crema di peperoni</h1>
+  <img src="./img/Pasta-con-crema-di-peperoni-3.webp" alt="Pasta con crema di peperoni" width="700" height="500">
 
-    <label for="Email">Email</label>
-    <input type="Email" for="Email">
+  <table>
+    <tr>
+      <th>Preparazione</th>
+      <th>Difficoltà</th>
+      <th>Prezzo</th>
+    </tr>
+    <tr>
+      <td>20 min</td>
+      <td>Facile</td>
+      <td>Basso</td>
+    </tr>
+  </table>
 
-    <br>
-    <br>
-        
-    <label for="Password">Password</label>
-    <input type="Password" name="Password">
+  <hr>
 
-    <br>
-    <br>
-    <input type="checkbox" id="termini">
-    <label for="termini">Acconsento al trattamento dei dati</label>
+  <h2>Ingredienti</h2>
+  <ul>
+    <li>Fusilli</li>
+    <li>Peperoni</li>
+    <li>2 spicchi di aglio</li>
+    <li>Pomodori ramati</li>
+    <li>Olio extra vergine di oliva</li>
+    <li>Pepe nero</li>
+    <li>Basilico</li>
+    <li>Sale fino</li>
+  </ul>
 
-    <br>
-    <br>
-  
+  <hr>
+
+  <h2>Preparazione</h2>
+  <p>
+    Per preparare la pasta con crema di peperoni, mettete a bollire l'acqua della pasta e salatela. Nel frattempo lavate i peperoni, rimuovete la calotta, tagliateli per il senso della lunghezza ed eliminate i semini interni, quindi riduceteli a cubetti. Tagliate grossolanamente il pomodoro ramato. Versate un filo d’olio in una casseruola e fate soffriggere gli spicchi di aglio. Aggiungete i cubetti di peperone. Unite anche il pomodoro, salate e poi aromatizzate con il pepe e le foglie di basilico. Cuocete a fuoco medio-alto per circa 15 minuti mescolando di tanto in tanto. Quando i peperoni saranno cotti, versate la pasta nell'acqua che intanto sarà arrivata a bollore e cuocetela al dente. Intanto versate i peperoni cotti col pomodoro in un contenitore alto, eliminando l'aglio, e frullate tutto con il mixer a immersione. Trasferite la crema ottenuta nella padella in cui avete cotto i peperoni, accendete il fuoco basso, unite un mestolo di acqua di cottura della pasta e poi, una volta cotta al dente, scolate la pasta direttamente nella crema di peperoni. Mantecate il tempo di amalgamare bene la pasta, poi trasferite nei piatti da portata e aromatizzate con ancora qualche fogliolina di basilico fresca. La vostra pasta con crema di peperoni è pronta per essere servita.
+  </p>
+
+  <form>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <div>
+      <input type="checkbox" id="termini" name="termini" required>
+      <label for="termini">Acconsento al trattamento dei dati</label>
+    </div>
 
     <p>Livello di gradimento:</p>
-    <input type="radio" id="gradimento" name="gradimento">
-    <label for="gradimento">Eccellente</label>
-        
-    <input type="radio" id="gradimento" name="gradimento">
-    <label for="gradimento">Molto buono</label>
-   
-    <input type="radio" id="gradimento" name="gradimento">
-    <label for="gradimento">Buono</label>
-    
-    <input type="radio" id="gradimento" name="gradimento">
-    <label for="gradimento">Sufficiente</label>
+    <div class="radio-group">
+      <input type="radio" id="eccellente" name="gradimento" value="eccellente" required>
+      <label for="eccellente">Eccellente</label>
 
-    <input type="radio" id="gradimento" name="gradimento">
-    <label for="gradimento">Scadente</label>
+      <input type="radio" id="molto-buono" name="gradimento" value="molto-buono">
+      <label for="molto-buono">Molto buono</label>
 
-    <br>
-    <br>
+      <input type="radio" id="buono" name="gradimento" value="buono">
+      <label for="buono">Buono</label>
 
-    <br>
-    <br>
+      <input type="radio" id="sufficiente" name="gradimento" value="sufficiente">
+      <label for="sufficiente">Sufficiente</label>
 
-    <input type="submit" value="invia">
+      <input type="radio" id="scadente" name="gradimento" value="scadente">
+      <label for="scadente">Scadente</label>
+    </div>
 
-   
+    <input type="submit" value="Invia">
+  </form>
 </body>
 </html>
