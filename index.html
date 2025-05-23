@@ -10,21 +10,28 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #EF2D56;
-      color: #FF7F7F;
+      /* Sfondo sfumato blu-viola */
+      background: linear-gradient(135deg, #5f2c82, #49a09d);
+      color: #e0e7ff; /* testo chiaro, azzurro tenue */
       text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     h1 {
       margin-top: 80px;
       font-size: 3rem;
-      color: #4b6043;
+      color: #d1d9ff; /* azzurro più chiaro */
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
 
     h2 {
       font-size: 1.5rem;
       margin-bottom: 40px;
-      color: #6b7c59;
+      color: #b0b8cc; /* grigio azzurro */
+      font-weight: 400;
     }
 
     #esercizi {
@@ -33,30 +40,38 @@
       align-items: center;
       gap: 15px;
       margin-bottom: 60px;
+      width: 100%;
+      max-width: 320px;
     }
 
     .link-card {
-      background-color: #ffffff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s, background-color 0.2s;
-      width: 260px;
+      background-color: rgba(255, 255, 255, 0.15); /* bianco trasparente */
+      padding: 14px 28px;
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      width: 100%;
       text-align: center;
+      backdrop-filter: blur(6px); /* effetto vetro satinato */
+      -webkit-backdrop-filter: blur(6px);
     }
 
     .link-card a {
       text-decoration: none;
-      color: #4b6043;
-      font-weight: 600;
-      font-size: 1.1rem;
+      color: #e0e7ff;
+      font-weight: 700;
+      font-size: 1.2rem;
       display: block;
+      user-select: none;
     }
 
     .link-card:hover {
-      transform: scale(1.03);
-      background-color: #e6efd2;
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
     }
+
   </style>
 </head>
 <body>
