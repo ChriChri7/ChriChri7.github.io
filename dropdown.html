@@ -1,92 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dropdown semplice</title>
   <style>
-    * {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
     }
 
     nav {
       position: fixed;
-      width: 100%;
       top: 0;
       left: 0;
-      right: 0;
-      padding: 12px;
+      width: 100%;
       background-color: rgb(102, 0, 255);
+      padding: 12px;
+      box-sizing: border-box;
     }
 
     button {
-      padding: 12px;
-      border-radius: 12px;
+      background-color: white;
       border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
       cursor: pointer;
-      background-color: #fff;
-      color: #000;
+      font-size: 16px;
     }
 
-button:hover {
-      background-color: #e8e8e8;
+    button:hover {
+      background-color: #e0e0e0;
     }
 
     #dropdown {
-      position: absolute;
       display: none;
-      top: 100%;
-      left: 0;
-      right: 0;
+      position: absolute;
       background-color: rgb(102, 0, 255);
-      padding: 12px;
+      margin-top: 8px;
+      padding: 10px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+      min-width: 120px;
     }
 
-    a {
+    #dropdown a {
+      display: block;
       color: white;
       text-decoration: none;
+      padding: 6px 0;
     }
 
-    a:hover {
+    #dropdown a:hover {
       text-decoration: underline;
     }
-
-  #dropdown-content {
-      display: flex;
-      flex-direction: column;
-      padding: 3px;
-      gap: 5px;
-    }
   </style>
-
-  <body>
-    <nav>
-      <button>Toggle dropdown</button>
-      <div id="dropdown">
-        <div id="dropdown-content">
-          <a href="#">link 1</a>
-          <a href="#">link 2</a>
-          <a href="#">link 3</a>
-        </div>
-      </div>
-    </nav>
-  </body>
+</head>
+<body>
+  <nav>
+    <button id="toggleBtn">Menu</button>
+    <div id="dropdown">
+      <a href="#">link 1</a>
+      <a href="#">link 2</a>
+      <a href="#">link 3</a>
+    </div>
+  </nav>
 
   <script>
-    const button = document.querySelector("button");
-    const dropdown = document.querySelector("div");
-    let isVisible = false;
-    button.addEventListener("click", () => {
-      dropdown.style.display = isVisible ? "none" : "block";
-      isVisible = !isVisible;
+    const btn = document.getElementById('toggleBtn');
+    const dropdown = document.getElementById('dropdown');
+
+    btn.addEventListener('click', () => {
+      if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+      } else {
+        dropdown.style.display = 'block';
+      }
     });
 
-document.addEventListener("click", (e) => {
-      if (!dropdown.contains(e.target) && !e.target.matches("button")) {
-        dropdown.style.display = "none";
-        isVisible = false;
+    document.addEventListener('click', (event) => {
+      if (!btn.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.style.display = 'none';
       }
     });
   </script>
+</body>
 </html>
